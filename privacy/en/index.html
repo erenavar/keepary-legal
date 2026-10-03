@@ -1,37 +1,216 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="referrer" content="no-referrer"><title>Keepary Privacy Policy</title><link rel="stylesheet" href="../../site.css"></head>
-<body><a class="skip" href="#content">Skip to content</a><header><a href="../../index.html">Keepary</a><nav aria-label="Main navigation"><a href="../index.html">Privacy</a><a href="../../terms/index.html">Terms</a><a href="../../support/index.html">Support</a></nav></header><main id="content"><p><a href="../tr/" lang="tr">Türkçe</a></p><h1>Keepary Privacy Policy</h1>
-<p><strong>Effective date:</strong> 2026-10-03<br><strong>Developer:</strong> EREN AVAR<br><strong>Contact:</strong> <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a></p>
-<p class="notice"><strong>Pre-release policy:</strong> This page describes Keepary’s local features and intended billing verification. Keepary is provided by EREN AVAR, an individual developer, not a company. The billing verification service is not deployed or enabled. Its final hosting, retention and deletion details will be reviewed and this policy updated before that service is enabled.</p>
-<h2>1. What Keepary does</h2>
-<p>Keepary is a local-first purchase-memory application. It lets you store receipts and other purchase documents, review on-device text recognition, keep receipts and line items, track products and your personal price history, save bills, purchases, return dates and warranty dates, receive local reminders, and view insights calculated from your own records.</p>
-<h2>2. Data you choose to store</h2>
-<p>Depending on the features you use, Keepary may store document images or PDFs; document metadata; recognized text; reviewed receipt, item, product, alias and price-observation data; bills and bill series; purchases; return and warranty details; tags; notes; reminder preferences; and app settings. This content is stored in Keepary's application-private storage and encrypted local database on your device.</p>
-<p>Keepary does not operate a Keepary account, document server, cloud sync service or cloud backup service in v1. Keepary does not upload your documents, OCR text, receipts, products, bills, purchases or Insights to a Keepary server.</p>
-<h2>3. On-device processing</h2>
-<p>On iOS, text recognition uses Apple Vision. On Android, text recognition uses Google ML Kit. Document text and recognition results are processed on-device. Google states that ML Kit input data and output are not sent to Google, but ML Kit may contact Google for fixes, model or compatibility information and may send device, app, performance and API-utilization metrics for diagnostics, maintenance, improvement and abuse prevention.</p>
-<p>Keepary's product matching, personal price calculations, bill comparisons, deadline calculations and Insights run locally. Personal Price Change reflects only the purchase history you recorded; it is not an official inflation measure.</p>
-<h2>4. Camera, files and notifications</h2>
-<p>Camera access is requested only when you choose to capture a document. Photo and document pickers are opened only after your action. Selected source files are copied into Keepary's private storage. Local notifications are used for return, warranty and bill dates you save. Keepary does not request a push token or operate a push-notification server in v1.</p>
-<h2>5. Subscriptions</h2>
-<p>Apple or Google processes subscription purchases, trial eligibility, payment details, renewal and cancellation. Keepary receives store product and entitlement information needed to present plans and unlock Premium. Keepary does not receive or store your full payment-card details. Store infrastructure may process account, transaction, device, diagnostic and fraud-prevention information under Apple's or Google's own terms and privacy policies.</p>
-<p>When configured, Keepary's billing verifier receives only a store subscription proof (signed transaction/original transaction identity or Google purchase token), a random locally generated installation identifier/public key and signed request metadata. It verifies current subscription status with Apple/Google and returns a minimal signed entitlement. No documents, receipt photos, PDFs, OCR text, receipt/item/product records, price history, bills, local purchase records, returns, warranties, Vault documents, Insights or exports are sent to that backend. There is no Keepary login, email/name profile, advertising identifier or device fingerprint. The anonymous billing identifier links only verification records, not your app content.</p>
-<p>Store proof is encrypted at rest and sensitive tokens/JWS are excluded from application logs. Intended retention: subscription state/proof while active then 90 days after terminal expiry/revocation; unused installation 90 days; notification events 30 days; request IDs 24 hours; challenges 5 minutes; deletion HMAC tombstones 31 days. Anonymous binding deletion does not cancel a store subscription. Provider, network metadata, safe log retention (candidate 7 days), anonymous aggregates (candidate 90 days) and encrypted recovery history (at most 30 additional days, if enabled) require final owner approval and deployment verification. The final verification provider and confirmed deletion/recovery arrangements will be identified here before the verification service is enabled. For questions about this planned processing, contact <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a>.</p>
-<p>Restore purchases uses the relevant store account and works after installation-ID reset or device change. iOS Keychain values may survive uninstall; recovery does not depend on retaining them. Cross-store account linking is not provided. A previously verified local entitlement works offline for at most 72 hours and never beyond known expiry; a refund can only be learned when verification reconnects. Expiry leaves existing records accessible and restricts new Premium acquisition/creation.</p>
-<h2>6. Advertising, analytics and tracking</h2>
-<p>Keepary contains no advertising SDK, behavioral analytics SDK or behavioral tracking SDK. Keepary does not use your purchase history for advertising, does not sell your personal data and does not request App Tracking Transparency permission or use IDFA. Platform and third-party components may still process limited operational or diagnostic information as described above.</p>
-<h2>7. Backup, migration and uninstalling</h2>
-<p>Keepary's encrypted database, original documents and thumbnails are intentionally excluded from normal operating-system cloud backup and migration. The encryption key is device-bound. Uninstalling Keepary, clearing its application data, losing the device or a device failure may permanently remove local Keepary data. Keepary v1 cannot recover that data from a Keepary cloud service.</p>
-<h2>8. Export and sharing</h2>
-<p>You can create structured JSON and CSV exports and can share original stored documents individually. Export files are created locally and shared only after your explicit action through the operating-system share sheet. After an exported file leaves Keepary's protected storage, you control its destination and security. Keepary cleans its temporary export copies after the share flow.</p>
-<h2>9. Deleting local data</h2>
-<p>“Delete All Keepary Data” removes local business records, stored documents, OCR/history data, local preferences and Keepary-owned scheduled reminders, and replaces the local database encryption key. This action does not cancel an Apple or Google subscription. Subscription cancellation is managed through the relevant store. Uninstalling the app also normally removes its local data.</p>
-<p>Local reset also deletes the local anonymous billing ID/key. It does not promise immediate deletion of backend verification records, particularly while offline. Backend binding deletion is a separate authenticated billing request/privacy process; final contact and workflow require owner completion before the verifier is enabled. Store restore remains available after reset.</p>
-<h2>10. Data disclosure choices</h2>
-<p>Keepary does not infer return, warranty, consumer, tax or other legal rights from your locale. Dates are the dates you or your documents provide. The app supports English and Turkish while keeping language separate from record currency and region.</p>
-<h2>11. Children, changes and contact</h2>
-<p>Keepary is not specifically directed to children. Any additional age or regional requirements will be reviewed before the app is released.</p>
-<p>We may update this policy when Keepary's behavior changes. The published policy will show its effective date. Questions and privacy requests can be sent to <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a>.</p>
-<p>This policy is a product draft and does not claim attorney review, legal certification or universal regulatory compliance.</p>
-<h2>12. This website</h2>
-<p>GitHub Pages hosts this legal/support website. The website code adds no cookies, analytics, tracking, remote fonts or external JavaScript. GitHub may process connection information, including IP addresses, to provide and secure its hosting service under GitHub’s own privacy statement. GitHub Pages is not Keepary’s billing verification host.</p></main><footer>EREN AVAR · Individual developer<br>Hosted on GitHub Pages. This site code adds no analytics, tracking or cookies.</footer></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Keepary Privacy Policy</title>
+    <link rel="stylesheet" href="../../site.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header>
+      <a href="../../index.html">Keepary</a>
+      <nav aria-label="Main navigation">
+        <a href="../index.html">Privacy</a
+        ><a href="../../terms/index.html">Terms</a
+        ><a href="../../support/index.html">Support</a>
+      </nav>
+    </header>
+    <main id="content">
+      <p><a href="../tr/" lang="tr">Türkçe</a></p>
+      <h1>Keepary Privacy Policy</h1>
+      <p>
+        <strong>Effective date:</strong> 2026-10-03<br /><strong
+          >Developer:</strong
+        >
+        EREN AVAR<br /><strong>Contact:</strong>
+        <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a>
+      </p>
+      <p class="notice">
+        <strong>Pre-release policy:</strong> This page describes Keepary’s local
+        features and intended billing verification. Keepary is provided by EREN
+        AVAR, an individual developer, not a company. The billing verification
+        service is not deployed or enabled. Its final hosting, retention and
+        deletion details will be reviewed and this policy updated before that
+        service is enabled.
+      </p>
+      <h2>1. What Keepary does</h2>
+      <p>
+        Keepary is a local-first purchase-memory application. It lets you store
+        receipts and other purchase documents, review on-device text
+        recognition, keep receipts and line items, track products and your
+        personal price history, save bills, purchases, return dates and warranty
+        dates, receive local reminders, and view insights calculated from your
+        own records.
+      </p>
+      <h2>2. Data you choose to store</h2>
+      <p>
+        Depending on the features you use, Keepary may store document images or
+        PDFs; document metadata; recognized text; reviewed receipt, item,
+        product, alias and price-observation data; bills and bill series;
+        purchases; return and warranty details; tags; notes; reminder
+        preferences; and app settings. This content is stored in Keepary's
+        application-private storage and encrypted local database on your device.
+      </p>
+      <p>
+        Keepary does not operate a Keepary account, document server, cloud sync
+        service or cloud backup service in v1. Keepary does not upload your
+        documents, OCR text, receipts, products, bills, purchases or Insights to
+        a Keepary server.
+      </p>
+      <h2>3. On-device processing</h2>
+      <p>
+        On iOS, text recognition uses Apple Vision. On Android, text recognition
+        uses Google ML Kit. Document text and recognition results are processed
+        on-device. Google states that ML Kit input data and output are not sent
+        to Google, but ML Kit may contact Google for fixes, model or
+        compatibility information and may send device, app, performance and
+        API-utilization metrics for diagnostics, maintenance, improvement and
+        abuse prevention.
+      </p>
+      <p>
+        Keepary's product matching, personal price calculations, bill
+        comparisons, deadline calculations and Insights run locally. Personal
+        Price Change reflects only the purchase history you recorded; it is not
+        an official inflation measure.
+      </p>
+      <h2>4. Camera, files and notifications</h2>
+      <p>
+        Camera access is requested only when you choose to capture a document.
+        Photo and document pickers are opened only after your action. Selected
+        source files are copied into Keepary's private storage. Local
+        notifications are used for return, warranty and bill dates you save.
+        Keepary does not request a push token or operate a push-notification
+        server in v1.
+      </p>
+      <h2>5. Subscriptions</h2>
+      <p>
+        Apple or Google processes subscription purchases, trial eligibility,
+        payment details, renewal and cancellation. Keepary receives store
+        product and entitlement information needed to present plans and unlock
+        Premium. Keepary does not receive or store your full payment-card
+        details. Store infrastructure may process account, transaction, device,
+        diagnostic and fraud-prevention information under Apple's or Google's
+        own terms and privacy policies.
+      </p>
+      <p>
+        When configured, Keepary's billing verifier receives only a store
+        subscription proof (signed transaction/original transaction identity or
+        Google purchase token), a random locally generated installation
+        identifier/public key and signed request metadata. It verifies current
+        subscription status with Apple/Google and returns a minimal signed
+        entitlement. No documents, receipt photos, PDFs, OCR text,
+        receipt/item/product records, price history, bills, local purchase
+        records, returns, warranties, Vault documents, Insights or exports are
+        sent to that backend. There is no Keepary login, email/name profile,
+        advertising identifier or device fingerprint. The anonymous billing
+        identifier links only verification records, not your app content.
+      </p>
+      <p>
+        Store proof is encrypted at rest and sensitive tokens/JWS are excluded
+        from application logs. Intended retention: subscription state/proof
+        while active then 90 days after terminal expiry/revocation; unused
+        installation 90 days; notification events 30 days; request IDs 24 hours;
+        challenges 5 minutes; deletion HMAC tombstones 31 days. Anonymous
+        binding deletion does not cancel a store subscription. Provider, network
+        metadata, safe log retention (candidate 7 days), anonymous aggregates
+        (candidate 90 days) and encrypted recovery history (at most 30
+        additional days, if enabled) require final owner approval and deployment
+        verification. The final verification provider and confirmed
+        deletion/recovery arrangements will be identified here before the
+        verification service is enabled. For questions about this planned
+        processing, contact
+        <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a>.
+      </p>
+      <p>
+        Restore purchases uses the relevant store account and works after
+        installation-ID reset or device change. iOS Keychain values may survive
+        uninstall; recovery does not depend on retaining them. Cross-store
+        account linking is not provided. A previously verified local entitlement
+        works offline for at most 72 hours and never beyond known expiry; a
+        refund can only be learned when verification reconnects. Expiry leaves
+        existing records accessible and restricts new Premium
+        acquisition/creation.
+      </p>
+      <h2>6. Advertising, analytics and tracking</h2>
+      <p>
+        Keepary contains no advertising SDK, behavioral analytics SDK or
+        behavioral tracking SDK. Keepary does not use your purchase history for
+        advertising, does not sell your personal data and does not request App
+        Tracking Transparency permission or use IDFA. Platform and third-party
+        components may still process limited operational or diagnostic
+        information as described above.
+      </p>
+      <h2>7. Backup, migration and uninstalling</h2>
+      <p>
+        Keepary's encrypted database, original documents and thumbnails are
+        intentionally excluded from normal operating-system cloud backup and
+        migration. The encryption key is device-bound. Uninstalling Keepary,
+        clearing its application data, losing the device or a device failure may
+        permanently remove local Keepary data. Keepary v1 cannot recover that
+        data from a Keepary cloud service.
+      </p>
+      <h2>8. Export and sharing</h2>
+      <p>
+        You can create structured JSON and CSV exports and can share original
+        stored documents individually. Export files are created locally and
+        shared only after your explicit action through the operating-system
+        share sheet. After an exported file leaves Keepary's protected storage,
+        you control its destination and security. Keepary cleans its temporary
+        export copies after the share flow.
+      </p>
+      <h2>9. Deleting local data</h2>
+      <p>
+        “Delete All Keepary Data” removes local business records, stored
+        documents, OCR/history data, local preferences and Keepary-owned
+        scheduled reminders, and replaces the local database encryption key.
+        This action does not cancel an Apple or Google subscription.
+        Subscription cancellation is managed through the relevant store.
+        Uninstalling the app also normally removes its local data.
+      </p>
+      <p>
+        Local reset also deletes the local anonymous billing ID/key. It does not
+        promise immediate deletion of backend verification records, particularly
+        while offline. Backend binding deletion is a separate authenticated
+        billing request/privacy process; final contact and workflow require
+        owner completion before the verifier is enabled. Store restore remains
+        available after reset.
+      </p>
+      <h2>10. Data disclosure choices</h2>
+      <p>
+        Keepary does not infer return, warranty, consumer, tax or other legal
+        rights from your locale. Dates are the dates you or your documents
+        provide. The app supports English and Turkish while keeping language
+        separate from record currency and region.
+      </p>
+      <h2>11. Children, changes and contact</h2>
+      <p>
+        Keepary is not specifically directed to children. Any additional age or
+        regional requirements will be reviewed before the app is released.
+      </p>
+      <p>
+        We may update this policy when Keepary's behavior changes. The published
+        policy will show its effective date. Questions and privacy requests can
+        be sent to <a href="mailto:erenavar@gmail.com">erenavar@gmail.com</a>.
+      </p>
+      <p>
+        This policy is a product draft and does not claim attorney review, legal
+        certification or universal regulatory compliance.
+      </p>
+      <h2>12. This website</h2>
+      <p>
+        GitHub Pages hosts this legal/support website. The website code adds no
+        cookies, analytics, tracking, remote fonts or external JavaScript.
+        GitHub may process connection information, including IP addresses, to
+        provide and secure its hosting service under GitHub’s own privacy
+        statement. GitHub Pages is not Keepary’s billing verification host.
+      </p>
+    </main>
+    <footer>
+      EREN AVAR · Individual developer<br />Hosted on GitHub Pages. This site
+      code adds no analytics, tracking or cookies.
+    </footer>
+  </body>
+</html>
